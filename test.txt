@@ -1,0 +1,4 @@
+this is text file1
+inheritance is used for reuability of code .
+it get the properties of base calss
+
