@@ -1,0 +1,39 @@
+<html>
+<head>
+<script>
+var cars=[];
+function addCars()
+{
+var c=document.getElementById("nm").value;
+cars.push(c);
+console.log("After Adding:"+c);
+console.log(cars);
+console.log(cars.sort());
+console.log("Reverse:"+cars.reverse());
+
+}
+function initialization()
+{
+	document.getElementById("addbtn").addEventListener("click",addCars);
+}
+function deleteCar()
+{
+dcar=prompt("Enter car name to delete");
+for(var i=0;i<cars.length;i++)
+{
+	if(cars[i]==dcar)
+	cars.splice(i,1);
+	break;
+
+}
+console.log("After Deleting:"+dcar);
+console.log(cars);
+}
+</script>
+</head>
+<body onload="initialization()">
+Name:<input type="text" name="nm" id="nm">
+<button type="button" name="addbtn" id="addbtn">Add Car</button>
+<button type="button" name="delbtn" id="delbtn" onclick="deleteCar()">Delete Car</button>
+</body>
+</html>
